@@ -4,3 +4,5 @@
 
 ### Joona
 -Created the Index.html and Drinks.html
+
+### Samuli
