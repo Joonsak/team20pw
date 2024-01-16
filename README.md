@@ -4,4 +4,6 @@
 [Link to our layout]
 ()
 ### Joona
--Created the Index.html and Drinks.html
+- Created the Index.html and Drinks.html
+
+### Samuli
