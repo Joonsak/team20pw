@@ -6,15 +6,53 @@ body {
     background-color: #f2c063;
 }
 .circle {
+    display:flex;
+    flex-direction: column;
     width: 185px;
     height: 185px;
-    background: #8C160B; 
+    background: #2c2b22; 
     -moz-border-radius: 142px; 
     -webkit-border-radius: 142px; 
     border-radius: 142px;
  }
- #entrement {
+ #entrementl {
+    display:flex;
+    width:165px;
+    height: 200px;
+    margin-left:0px;
+    flex-direction: column;
+ }
+ #entrementr{
+    display:flex;
     width:165px;
     height: 200px;
     margin-left:10px;
+    flex-direction: column;
+    
  }
+ entre1, entre2, entre3 {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+ }
+ #logo {
+    width:200px;
+    height:200px;
+ }
+ .container {
+    display:flex;
+    align-items: center;
+    padding:20px;
+ }
+.left-side, .right-side {
+    text-align:center;
+}
+ p {
+    max-width:300px;
+    margin-left:10px;
+    margin-right:10px;
+ }
+#hr {
+    text-align: right;
+    margin-right:50px;
+}
