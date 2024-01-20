@@ -77,7 +77,7 @@ body {
 }
 @font-face {
     font-family: milonga;
-    src: url("/Styles/fonts/Milonga-regular.ttf");
+    src: url("fonts/Milonga-regular.ttf");
   }
 footer {
     background-color:#f2c063;
