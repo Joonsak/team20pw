@@ -113,7 +113,7 @@ p {
   background-color: #333; 
   left:0;
 }
-@media (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
    .wide-bar-left,
    .wide-bar-right {
      display: none; 
@@ -130,39 +130,24 @@ p {
       background-color: #8c160b;
       flex-direction:row;
    }
-   @media (max-width: 700px) {
+   @media screen and  (max-width: 700px) {
    #logo1, #logo2, #logo3 {
       display:none;
    }
 }
-   .circlel1,
-   .circler1,
-   .circlel2,
-   .circler2,
-   .circlel3,
-   .circler3 {
+   .circlel1,.circler1, .circlel2, .circler2, .circlel3,.circler3 {
      margin-left: auto; 
      margin-right: auto;
    }
  
-   #entrementl1,
-   #entrementr1,
-   #entrementl2,
-   #entrementr2,
-   #entrementl3,
-   #entrementr3 {
+   #entrementl1,  #entrementr1,  #entrementl2, #entrementr2,  #entrementl3, #entrementr3 {
      margin-left: auto; 
      margin-right: auto;
    }
    body {
       overflow-x: auto; 
     }
-   #hl1,
-   #hr1,
-   #hl2,
-   #hr2,
-   #hl3,
-   #hr3 {
+   #hl1,  #hr1, #hl2,  #hr2,  #hl3,  #hr3 {
      margin-left: auto; 
      margin-right: auto;
    }
