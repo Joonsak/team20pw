@@ -7,6 +7,9 @@ body {
     margin-left: 100px;
     margin-right: 100px;
 }
+.dropdown-menu {
+    background-color: #f2c063;
+}
 nav {
     background-color: #f2c063;
     margin-left:100px;
@@ -80,6 +83,10 @@ footer{
     margin-left:100px;
     margin-right: 100px;
     padding: 10px 0;
+    align-content: center;
+    text-align: center;
+    font-size: small;
+
 
 }
 @media screen and (max-width: 500px) {
