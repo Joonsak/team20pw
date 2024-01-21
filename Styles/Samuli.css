@@ -4,7 +4,17 @@ nav {
 
 }
 body {
-   background-color: #f2c063 ;
+   background-color: #f2c063;
+   margin: 0; 
+   overflow-x: hidden; 
+}
+
+.entre1, .entre2, .entre3 {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   width: 100%; 
+   box-sizing: border-box; 
 }
 .circlel1, .circler1,.circlel2,.circler2,.circlel3, .circler3 {
    display:flex;
@@ -37,11 +47,7 @@ body {
    flex-direction: column;
    
 }
-.entre1, .entre2, .entre3 {
-   display:flex;
-   flex-direction: row;
-   justify-content: space-between;
-}
+
 .entre1 {
    background-color: #8c160b;
    color:#f2c063;
@@ -115,64 +121,71 @@ p {
 @media screen and (max-width: 1000px) {
    .wide-bar-left,
    .wide-bar-right {
-     display: none;
+      display: none;
    }
- 
-   body {
-     overflow-x: hidden;
-     background-color: #f2c063; /* Set the background color to match your design */
-   }
- 
+
    .container {
-     flex-direction: column;
-     text-align: center;
+      flex-direction: column;
+      text-align: center;
    }
- 
+
    p {
-     font-size: 12px;
+      font-size: 12px;
    }
- 
+
+   .entre1, .entre2, .entre3 {
+      flex-direction: column; 
+   }
+
+  
    .entre1 {
-     background-color: #8c160b;
-     flex-direction: row;
+      background-color: #8c160b;
+      color: #f2c063;
    }
- 
-   @media screen and (max-width: 700px) {
-     #logo1,
-     #logo2,
-     #logo3 {
-       display: none;
-     }
+
+   .entre2 {
+      background-color: #F57630;
+      color: #400101;
    }
- 
+
+   .entre3 {
+      background-color: #8c160b;
+      color: #f2c063;
+   }
+
+   #logo1,
+   #logo2,
+   #logo3 {
+      display: none;
+   }
+
    .circlel1,
    .circler1,
    .circlel2,
    .circler2,
    .circlel3,
-   .circler3 {
-     margin-left: auto;
-     margin-right: auto;
-   }
- 
+   .circler3,
    #entrementl1,
    #entrementr1,
    #entrementl2,
    #entrementr2,
    #entrementl3,
-   #entrementr3 {
-     margin-left: auto;
-     margin-right: auto;
-   }
- 
+   #entrementr3,
    #hl1,
    #hr1,
    #hl2,
    #hr2,
    #hl3,
    #hr3 {
-     margin-left: auto;
-     margin-right: auto;
+      margin-left: auto;
+      margin-right: auto;
    }
- }
- 
+   #hl1,
+   #hr1,
+   #hl2,
+   #hr2,
+   #hl3,
+   #hr3  {
+      text-align: center;
+   }
+}
