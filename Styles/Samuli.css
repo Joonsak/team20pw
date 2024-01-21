@@ -145,7 +145,7 @@ p {
      margin-right: auto;
    }
    body {
-      overflow-x: auto; 
+      overflow-x: hidden; 
     }
    #hl1,  #hr1, #hl2,  #hr2,  #hl3,  #hr3 {
      margin-left: auto; 
