@@ -1,5 +1,6 @@
 body {
     background-color: #2c2b22;
+    margin: 0;
 }
 .AnotherBody{
     background-color: #F57630;
@@ -10,6 +11,7 @@ nav {
     background-color: #f2c063;
     margin-left:100px;
     margin-right: 100px;
+    padding: 10px;
 }
 h1{
     font-size: 60px;
@@ -47,15 +49,6 @@ h1{
     margin-top: 10px;
     text-align: center;
 }
-@media screen and (max-width: 768px) {
-    .MainHeader {
-        text-align: center;
-    }
-
-    .MainHeader > div {
-        flex-direction: column;
-    }
-}
 .CenterContent{
     display: flex;
     margin-top: 20px;
@@ -74,11 +67,36 @@ h1{
     .CenterContent > div {
         margin: 10px 0;
     }
+    .MainHeader {
+        text-align: center;
+    }
+
+    .MainHeader > div {
+        flex-direction: column;
+    }
 }
 footer{
     background-color: #f2c063;
     margin-left:100px;
     margin-right: 100px;
+    padding: 10px 0;
+
+}
+@media screen and (max-width: 500px) {
+    body {
+        background-color: #F57630;
+        padding-bottom: 0;
+    }
+    .AnotherBody {
+        margin: 0; 
+        padding: 10px; 
+    }
+
+    nav, footer {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%; 
+    }
 }
 /* #2c2b22
 #f2c063
