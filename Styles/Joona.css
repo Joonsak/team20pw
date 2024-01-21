@@ -1,3 +1,17 @@
 body {
     background-color: black;
 }
+nav {
+    background-color: #f2c063;
+    margin-left:100px;
+ 
+}
+h1{
+    font-size: 100px;
+}
+#MermaidLogo {
+    width: 200px;
+    height: 200px;
+    
+}
+
