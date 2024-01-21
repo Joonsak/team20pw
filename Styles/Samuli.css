@@ -26,7 +26,7 @@ body {
    display:flex;
    width:165px;
    height: 200px;
-   margin-left:0px;
+   margin-left:10px;
    flex-direction: column;
 }
 #entrementr1,#entrementr2,#entrementr3{
@@ -90,9 +90,9 @@ p {
   background-color: #f2c063;
   font-family: milonga;
   font-size: small;
-  text-align: center; /* Center the text horizontally */
+  text-align: center; 
   display: flex;
-  justify-content: center; /* Center the content inside the flex container */
+  justify-content: center; 
 }
 
 
@@ -100,15 +100,15 @@ p {
   position: fixed;
   top: 0;
   height: 100%;
-  width: 100px; /* Set the width of the wide bar */
-  background-color: #333; /* Set the color of the wide bar */
+  width: 100px; 
+  background-color: #333; 
   right:0;
 }
 .wide-bar-left {
   position: fixed;
   top: 0;
   height: 100%;
-  width: 100px; /* Set the width of the wide bar */
-  background-color: #333; /* Set the color of the wide bar */
+  width: 100px; 
+  background-color: #333; 
   left:0;
 }
