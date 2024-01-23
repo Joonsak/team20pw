@@ -107,7 +107,7 @@ p {
   top: 0;
   height: 100%;
   width: 100px; 
-  background-color: #333; 
+  background-color: #2c2b22; 
   right:0;
 }
 .wide-bar-left {
@@ -115,10 +115,10 @@ p {
   top: 0;
   height: 100%;
   width: 100px; 
-  background-color: #333; 
+  background-color: #2c2b22; 
   left:0;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 950px) {
    .wide-bar-left,
    .wide-bar-right {
       display: none;
@@ -129,9 +129,7 @@ p {
       text-align: center;
    }
 
-   p {
-      font-size: 12px;
-   }
+
 
    .entre1, .entre2, .entre3 {
       flex-direction: column; 
