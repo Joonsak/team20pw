@@ -55,6 +55,7 @@ h1{
 .CenterContent{
     display: flex;
     margin-top: 20px;
+    margin-right: 10px;
 }
 .CenterContent > div {
     flex: 1;
@@ -107,9 +108,57 @@ footer{
 }
 
 .custom-container{
-    width: 50%;
+    width: 75%;
+    margin: 0 auto;
+    padding: 10px;
+    align-content: center;
+    text-align: center;
+    background-color: #8c160b;
+    border: 1px solid #f2c063;
+    color: #f2c063;
+}
+.table-container {
+    width: 75%;
     margin: 0 auto;
     align-content: center;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+#OurLocation{
+    width: 500px;
+    max-width: 100%;
+    height: auto;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+#LocationHeader{
+    text-align: center;
+    font-size: 60px;
+}
+.CenterContent #OurDirections {
+    font-size: 30px;
+}
+@media screen and (max-width: 1160px) {
+    .CenterContent {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #OurLocation {
+        width: 100%;
+        height: auto;
+    }
+
+    .CenterContent > div {
+        width: 100%;
+    }
+
+    .CenterContent #OurDirections {
+        font-size: 24px;
+        margin: 10px;
+    }
 }
 /* #2c2b22
 #f2c063
