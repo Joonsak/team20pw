@@ -1,12 +1,8 @@
 nav {
    background-color: #f2c063;
    margin-left:100px;
+   font-family:milonga;
 
-}
-body {
-   background-color: #f2c063;
-   margin: 0; 
-   overflow-x: hidden; 
 }
 
 .entre1, .entre2, .entre3 {
@@ -187,3 +183,150 @@ p {
       text-align: center;
    }
 }
+body {
+   background-color: #2c2b22;
+   margin: 0;
+   overflow-x: hidden; 
+   
+}
+.AnotherBody{
+   background-color: #F57630;
+   margin-left: 100px;
+   margin-right: 100px;
+   background: url("../Images/other/ship2.jpg");
+   background-position: bottom;
+   background-repeat: no-repeat;
+   background-size:cover;
+}
+.dropdown-menu {
+   background-color: #f2c063;
+}
+nav {
+   background-color: #f2c063;
+   margin-left:100px;
+   margin-right: 100px;
+   padding: 10px;
+}
+h1{
+   font-size: 60px;
+   font-family: milonga;
+}
+h2 {
+   font-family:milonga;
+}
+#MermaidLogo {
+   width: 200px;
+   height: 200px;
+   max-width: 100%;
+   height: auto;
+}
+#Haggis{
+   margin-top:10px;
+   width: 175px;
+   height: 175px;
+   margin-left: 10px;
+}
+#Wine{
+   width: 200px;
+   height: 200px;
+}
+#FriedRatSweker{
+   width: 175px;
+   height: 200px;
+}
+.MainHeader {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   
+}
+
+.MainHeader > div {
+   display: flex;
+   align-items: center;
+}
+
+#Slogan {
+   margin-top: 10px;
+   text-align: left;
+}
+.CenterContent{
+   display: flex;
+   margin-top: 400px;
+   color:
+}
+.CenterContent > div {
+   flex: 1;
+   margin: 0 10px;
+}
+
+@media screen and (max-width: 868px) {
+   .CenterContent {
+       flex-direction: column;
+       align-items: center;
+   }
+
+   .CenterContent > div {
+       margin: 10px 0;
+   }
+   .MainHeader {
+       text-align: center;
+   }
+
+   .MainHeader > div {
+       flex-direction: column;
+   }
+}
+footer{
+   background-color: #f2c063;
+   margin-left:100px;
+   margin-right: 100px;
+   padding: 10px 0;
+   align-content: center;
+   text-align: center;
+   font-size: small;
+
+
+}
+@media screen and (max-width: 500px) {
+   body {
+       background-color: #F57630;
+       padding-bottom: 0;
+   }
+   .AnotherBody {
+       margin: 0; 
+       padding: 10px; 
+   }
+
+   nav, footer {
+       margin-left: 0;
+       margin-right: 0;
+       width: 100%; 
+   }
+}
+
+.custom-container{
+   width: 50%;
+   margin: 0 auto;
+   align-content: center;
+   
+}
+.circle1, .circle2,.circle3 {
+display:flex;
+   flex-direction: column;
+   width: 200px;
+   height: 200px;
+   background: #400101; 
+   -moz-border-radius: 100px; 
+   -webkit-border-radius: 100px; 
+   border-radius: 100px;
+   margin-left:20px;
+}
+.circle1:hover,.circle2:hover,.circle3:hover {
+   background:#8c160b
+}
+/* #2c2b22
+#f2c063
+#F57630
+#8C160B
+#400101  */
