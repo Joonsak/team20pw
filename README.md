@@ -7,3 +7,6 @@
 - Created the Index.html and Drinks.html
 - 
 ### Samuli
+
+### Santeri
+- Created the AboutUs.html
