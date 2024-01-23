@@ -105,6 +105,12 @@ footer{
         width: 100%; 
     }
 }
+
+.custom-container{
+    width: 50%;
+    margin: 0 auto;
+    align-content: center;
+}
 /* #2c2b22
 #f2c063
 #F57630
