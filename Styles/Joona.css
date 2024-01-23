@@ -15,6 +15,7 @@ nav {
     margin-left:100px;
     margin-right: 100px;
     padding: 10px;
+    font-family: milonga;
 }
 h1{
     font-size: 60px;
@@ -87,8 +88,7 @@ footer{
     align-content: center;
     text-align: center;
     font-size: small;
-
-
+    font-family: milonga;
 }
 @media screen and (max-width: 500px) {
     body {
@@ -116,6 +116,7 @@ footer{
     background-color: #8c160b;
     border: 1px solid #f2c063;
     color: #f2c063;
+    font-family: milonga;
 }
 .table-container {
     width: 75%;
@@ -124,6 +125,7 @@ footer{
     text-align: center;
     margin-top: 20px;
     padding-top: 10px;
+    font-family: milonga;
 }
 
 #OurLocation{
@@ -136,9 +138,11 @@ footer{
 #LocationHeader{
     text-align: center;
     font-size: 60px;
+    font-family: milonga;
 }
 .CenterContent #OurDirections {
     font-size: 30px;
+    font-family: milonga;
 }
 @media screen and (max-width: 1160px) {
     .CenterContent {
@@ -160,6 +164,11 @@ footer{
         margin: 10px;
     }
 }
+@font-face {
+    font-family: milonga;
+    src: url("fonts/Milonga-Regular.ttf");
+  }
+
 /* #2c2b22
 #f2c063
 #F57630
