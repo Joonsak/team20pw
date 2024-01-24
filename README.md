@@ -11,11 +11,11 @@
 - fixed a lot of problems on other pages(Structure, mobile layout)
 -
 ### Samuli
--Created Menu pages and the css for them
--Styled index 
--brought and created files for some of the images
--got custom font to work
--created figma layouts
+- Created Menu pages and the css for them
+- Styled index 
+- brought and created files for some of the images
+- got custom font to work
+- created figma layouts
 
 
 ### Santeri
