@@ -131,7 +131,7 @@ p {
 
 
 
-   .entre1, .entre2, .entre3 {
+   .entre1, .entre2, .entre3, .food1, .food2, .food3, .drink1, .drink2, .drink3 {
       flex-direction: column; 
    }
 
@@ -161,12 +161,6 @@ p {
    .circler2,
    .circlel3,
    .circler3,
-   #entrementl1,
-   #entrementr1,
-   #entrementl2,
-   #entrementr2,
-   #entrementl3,
-   #entrementr3,
    #hl1,
    #hr1,
    #hl2,
