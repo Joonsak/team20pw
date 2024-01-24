@@ -48,14 +48,17 @@ nav {
 .entre1, .food1, .drink1 {
    background-color: #8c160b;
    color:#f2c063;
+   font-size:20px;
 }
 .entre2, .food2, .drink2 {
    background-color: #F57630;
    color:#400101;
+   font-size:20px;
 }
 .entre3, .food3, .drink3 {
    background-color: #8c160b;
    color:#f2c063;
+   font-size:20px;
 }
 #logo1,#logo2,#logo3 {
    width:200px;
@@ -73,7 +76,6 @@ nav {
 p {
    max-width:300px;
    font-family: milonga;
-   font-size:20px
 }
 #hr1,#hr2,#hr3{
    text-align: right;
