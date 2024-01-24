@@ -368,6 +368,10 @@ footer{
    h2, #jobd, #smt {
       font-size:20px;
    } 
+   .mid {
+      margin-left:0px;
+      margin-right:0px;
+   }
    .CenterContent{
       font-size:15px;
       margin-left: 0px;
