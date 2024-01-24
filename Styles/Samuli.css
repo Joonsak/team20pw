@@ -1,3 +1,4 @@
+/* Menu pages */
 nav {
    background-color: #f2c063;
    margin-left:100px;
@@ -5,7 +6,7 @@ nav {
 
 }
 
-.entre1, .entre2, .entre3 {
+.entre1, .entre2, .entre3, .food1, .food2, .food3, .drink1, .drink2, .drink3  {
    display: flex;
    flex-direction: row;
    justify-content: space-between;
@@ -22,20 +23,20 @@ nav {
    -webkit-border-radius: 142px; 
    border-radius: 142px;
 }
-.circlel1,.circlel2,.circlel3, #entrementl1,#entrementl2,#entrementl3 {
+.circlel1,.circlel2,.circlel3, #entrementl1,#entrementl2,#entrementl3, #foodl1,#foodl2,#foodl3, #drinkl1,#drinkl2,#drinkl3  {
   margin-left:100px;
 }
-.circler1,.circler2,.circler3, #entrementr1,#entrementr2,#entrementr3 {
+.circler1,.circler2,.circler3, #entrementr1,#entrementr2,#entrementr3, #foodr1,#foodr2,#foodr3, #drinkr1,#drinkr2,#drinkr3 {
   margin-right:100px;
 }
-#entrementl1,#entrementl2,#entrementl3 {
+#entrementl1,#entrementl2,#entrementl3, #foodl1,#foodl2,#foodl3, #drinkl1,#drinkl2,#drinkl3{
    display:flex;
    width:165px;
    height: 200px;
    margin-left:10px;
    flex-direction: column;
 }
-#entrementr1,#entrementr2,#entrementr3{
+#entrementr1,#entrementr2,#entrementr3, #foodr1,#foodr2,#foodr3, #drinkr1,#drinkr2,#drinkr3{
    display:flex;
    width:165px;
    height: 200px;
@@ -44,15 +45,15 @@ nav {
    
 }
 
-.entre1 {
+.entre1, .food1, .drink1 {
    background-color: #8c160b;
    color:#f2c063;
 }
-.entre2 {
+.entre2, .food2, .drink2 {
    background-color: #F57630;
    color:#400101;
 }
-.entre3 {
+.entre3, .food3, .drink3 {
    background-color: #8c160b;
    color:#f2c063;
 }
@@ -72,6 +73,7 @@ nav {
 p {
    max-width:300px;
    font-family: milonga;
+   font-size:20px
 }
 #hr1,#hr2,#hr3{
    text-align: right;
@@ -147,9 +149,7 @@ p {
       color: #f2c063;
    }
 
-   #logo1,
-   #logo2,
-   #logo3 {
+   #logo1,#logo2,  #logo3 {
       display: none;
    }
 
@@ -183,9 +183,10 @@ p {
       text-align: center;
    }
 }
-/* Index start*/
 
 
+
+/* Index start Mixed with Joona's code*/
 
 
 
