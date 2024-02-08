@@ -1,0 +1,116 @@
+
+ 
+ /* Index start Mixed with Joona's code*/
+ 
+ 
+ 
+ body {
+    background-color: #2c2b22;
+    margin: 0;
+    overflow-x: hidden; 
+    
+ }
+ .AnotherBody{
+    background-color: #F57630;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size:cover;
+    padding-bottom:500px;
+ }
+ .dropdown-menu {
+    background-color: #f2c063;
+ }
+ nav {
+    background-color: #f2c063;
+    margin-left:100px;
+    margin-right: 100px;
+    padding: 10px;
+ }
+ 
+ 
+ @media screen and (max-width: 1250px) {
+    #Slogan {
+       opacity:0;
+    }
+ }
+ @media screen and (max-width: 1200px) {
+    .CenterContent {
+        flex-direction: column;
+        align-items: center;
+    }
+ 
+    .CenterContent > div {
+        margin: 10px 0;
+    }
+    .MainHeader {
+        text-align: center;
+    }
+ 
+    .MainHeader > div {
+        flex-direction: column;
+    }
+ }
+ footer{
+    background-color: #f2c063;
+    margin-left:100px;
+    margin-right: 100px;
+    padding: 10px 0;
+    align-content: center;
+    text-align: center;
+    font-size: small;
+ 
+ 
+ }
+ @media screen and (max-width: 500px) {
+    body {
+        background-color: #2c2b22;
+        padding-bottom: 0;
+    }
+
+    .AnotherBody {
+        margin: 0; 
+        padding: 10px; 
+    }
+ 
+    nav, footer {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%; 
+    }
+ }
+ 
+#arvostelulomake {
+    margin-left:300px;
+}
+#arvo {
+    width:600px;
+    height:200px;
+    margin-left:10px;
+    margin-top:10px;
+}
+#nimi {
+    width:200px;
+    margin-left:10px;
+    margin-top:10px;
+}
+.AnotherBody {
+}
+
+ .arvostelus {
+    flex-direction: row; /* Arrange items in a row */
+    justify-content: space-around; /* Distribute items evenly along the main axis */
+    align-items: center; /* Center items vertically */
+    flex-wrap: wrap;
+ }
+#result {
+    display:flex;
+    flex-direction: row; /* Arrange items in a row */
+    justify-content: space-around; /* Distribute items evenly along the main axis */
+    align-items: center; /* Center items vertically */
+}
+
+#result > div {
+    margin: 10px; /* Add margin between each review */
+}
