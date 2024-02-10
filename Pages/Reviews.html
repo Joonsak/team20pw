@@ -27,11 +27,21 @@
         xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xmlhttp.send("arvostelut=" + jsonArvostelut);
     }
-
+    function ArvostelunTulostus(hid){
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("result").innerHTML = this.responseText;
+          }
+        };
+        xmlhttp.open("POST", "../php/arvostelu2.php", true);
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xmlhttp.send("tulostus=" + hid);	
+    }
     </script>
     <nav class="navbar navbar-expand-md">
         <div class="container-fluid">
-            <a class="nav-link disabled" href="#">Home</a>
+            <a class="nav-link" href="../index.html">Home</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -60,7 +70,7 @@
                         <a class="nav-link" href="Pages/Location.html">Location</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Pages/Reviews.html">Reviews</a>
+                        <a class="nav-link disabled" href="#">Reviews</a>
                     </li>
                 </ul>
             </div>

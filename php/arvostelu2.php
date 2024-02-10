@@ -8,4 +8,11 @@ catch(Exception $e){
     exit;
 }
 $tulos=mysqli_query($yhteys, "select * from arvostelut");
-tähän alle tulee se print div osuus
+print "<div class=arvostelus>";
+while ($rivi=mysqli_fetch_object($tulos)){
+print "<div>";
+print "<h2>$rivi->nimimerkki</h2>";
+print"<p> $rivi->arvostelu</p>";
+print"</div>"; 
+}
+print"</div>"; 
