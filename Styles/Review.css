@@ -84,33 +84,58 @@
 #arvostelulomake {
     margin-left:300px;
 }
+#nappi {
+    display:flex;
+    margin-top:5px;
+}
 #arvo {
     width:600px;
     height:200px;
     margin-left:10px;
     margin-top:10px;
+    display:flex;
+    flex-direction: column;
 }
 #nimi {
     width:200px;
     margin-left:10px;
     margin-top:10px;
-}
-.AnotherBody {
+    display:flex;
+    flex-direction: column;
 }
 
+
  .arvostelus {
-    flex-direction: row; /* Arrange items in a row */
-    justify-content: space-around; /* Distribute items evenly along the main axis */
-    align-items: center; /* Center items vertically */
-    flex-wrap: wrap;
- }
-#result {
     display:flex;
-    flex-direction: row; /* Arrange items in a row */
-    justify-content: space-around; /* Distribute items evenly along the main axis */
-    align-items: center; /* Center items vertically */
+    flex-direction: column; 
+    flex-wrap: wrap;
+    color:blue;
+
+ }
+ #result {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
 }
 
 #result > div {
-    margin: 10px; /* Add margin between each review */
+    flex: 1; 
+    margin: 10px; 
+    padding: 10px; 
+    background-color: #F57630; 
+    border: 1px solid #F57630; 
+    border-radius: 5px; 
+}
+.review-container {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    padding: 10px; 
+    margin-bottom: 20px; 
+}
+
+.arvostelu {
+    width: 100%; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
 }

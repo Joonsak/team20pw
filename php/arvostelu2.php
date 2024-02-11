@@ -10,14 +10,31 @@ if (!$yhteys) {
 $tulos = mysqli_query($yhteys, "SELECT * FROM arvostelut");
 
 if ($tulos) { // Check if query was successful
-    print "<div class='arvostelus'>";
-    while ($rivi = mysqli_fetch_object($tulos)) {
-        print "<div>";
-        print "<h2>$rivi->nimimerkki</h2>";
-        print "<p>$rivi->arvostelu</p>";
-        print "</div>"; 
+    print "<div class='container'>"; // Start with a container to hold the rows
+
+    $i = 0; // Counter for tracking the number of reviews
+    
+    while ($rivi=mysqli_fetch_object($tulos)){
+        if ($i % 3 === 0) {
+            // Start a new row after every third review
+            echo "<div class='row'>";
+        }
+        
+        // Output each review inside a column div
+        echo "<div class='col-md-4'>";
+        echo "<div class='review-container'>";
+        echo "<h2>$rivi->nimimerkki</h2>";
+        echo "<p class='arvostelu'>$rivi->arvostelu</p> <a href='../php/poista.php?poistettava=$rivi->id'>Poista</a></p>";
+        echo "</div>";
+        echo "</div>";
+        
+        $i++;
+        
+        if ($i % 3 === 0) {
+            // Close the row after every third review
+            echo "</div>";
+        }
     }
-    print "</div>"; 
 } else {
     echo "Error executing query: " . mysqli_error($yhteys);
 }
