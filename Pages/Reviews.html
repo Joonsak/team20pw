@@ -9,36 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blushing Mermaid - Home</title>
 </head>
-<body>
-    <script>
-        function lahetaArvostelu(lomake){
-        var arvostelut=new Object();
-        arvostelut.nimimerkki=lomake.nimimerkki.value;
-        arvostelut.arvostelu=lomake.arvostelu.value;
-        var jsonArvostelut=JSON.stringify(arvostelut);
-
-        xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("result").innerHTML = this.responseText;
-          }
-        };
-        xmlhttp.open("POST", "../php/arvostelu.php", true);
-        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xmlhttp.send("arvostelut=" + jsonArvostelut);
-    }
-    function ArvostelunTulostus(hid){
-        xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("result").innerHTML = this.responseText;
-          }
-        };
-        xmlhttp.open("POST", "../php/arvostelu2.php", true);
-        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xmlhttp.send("tulostus=" + hid);	
-    }
-    </script>
+<body onload="ArvostelunTulostus(hid)">
     <nav class="navbar navbar-expand-md">
         <div class="container-fluid">
             <a class="nav-link" href="../index.html">Home</a>
@@ -64,10 +35,10 @@
                         </ul> 
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Pages/AboutUs.html">About us</a>
+                        <a class="nav-link" href="../Pages/AboutUs.html">About us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Pages/Location.html">Location</a>
+                        <a class="nav-link" href="../Pages/Location.html">Location</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link disabled" href="#">Reviews</a>
@@ -84,7 +55,7 @@
             </form>
             <p id='result'>
                 Palaute tähän
-                </p> 
+            </p> 
     </div> 
     <footer>
         <p>Unofficial page</p>
@@ -92,5 +63,38 @@
         <p>&copy; Blushing mermaid logo created by canvaAI</p>
         <p>&copy; Background pictures from pixabay</p>
     </footer>
+    <script>
+    var hid="jooo";
+    function lahetaArvostelu(lomake){
+        var arvostelut=new Object();
+        arvostelut.nimimerkki=lomake.nimimerkki.value;
+        arvostelut.arvostelu=lomake.arvostelu.value;
+        var jsonArvostelut=JSON.stringify(arvostelut);
+
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("result").innerHTML = this.responseText;
+          }
+        };
+        xmlhttp.open("POST", "../php/arvostelu.php", true);
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xmlhttp.send("arvostelut=" + jsonArvostelut);
+    }
+
+    function ArvostelunTulostus(hid){
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("result").innerHTML = this.responseText;
+          }
+        };
+        xmlhttp.open("POST", "../php/arvostelu2.php", true);
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xmlhttp.send("tulostus=" + hid);	
+    }
+
+
+    </script>
 </body>
 </html>
