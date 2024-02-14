@@ -29,10 +29,10 @@ if ($arvostelut === null) {
     die("JSON decoding failed");
 }
 
-$sql = "INSERT INTO arvostelut (nimimerkki, arvostelu) VALUES (?, ?)";
+$sql = "INSERT INTO arvostelut (nimimerkki, arvostelu, stars) VALUES (?, ?, ?)";
 $stmt = mysqli_prepare($yhteys, $sql);
 
-mysqli_stmt_bind_param($stmt, 'ss', $arvostelut->nimimerkki, $arvostelut->arvostelu);
+mysqli_stmt_bind_param($stmt, 'sss', $arvostelut->nimimerkki, $arvostelut->arvostelu, $arvostelut->stars);
 mysqli_stmt_execute($stmt);
 $tulos=mysqli_query($yhteys, "select * from arvostelut");
 
@@ -50,8 +50,14 @@ while ($rivi=mysqli_fetch_object($tulos)){
     // Output each review inside a column div
     echo "<div class='col-md-4'>";
     echo "<div class='review-container'>";
-    echo "<h2>$rivi->nimimerkki</h2>";
-    echo "<p class='arvostelu'>$rivi->arvostelu</p> <a href='../php/poista.php?poistettava=$rivi->id'>Poista</a></p>";
+    echo "<h2>$rivi->nimimerkki</h2>"; 
+    if ($rivi->stars === "star1") {    echo "<p id='star1'> &#9733;</p>";}
+        else if ($rivi->stars === "star2") {echo "<p id='star2'> &#9733;&#9733;</p>";}
+        else if ($rivi->stars === "star3") {echo "<p id='star3'> &#9733;&#9733;&#9733;</p>";}
+        else if ($rivi->stars === "star4") {echo "<p id='star4'> &#9733;&#9733;&#9733;&#9733;</p>";}
+        else if ($rivi->stars === "star5") {echo "<p id='star5'> &#9733;&#9733;&#9733;&#9733;&#9733;</p>";}
+    echo "<p class='arvostelu'>$rivi->arvostelu</p>";
+    echo "<a href='../php/poista.php?poistettava=$rivi->id'><button type='button'>Poista</button></a></p>";
     echo "</div>";
     echo "</div>";
     
@@ -82,7 +88,7 @@ function tarkistaJson($json){
         return false;
     }
     $arvostelut=json_decode($json, false);
-    if (empty($arvostelut->nimimerkki) || empty($arvostelut->arvostelu)){
+    if (empty($arvostelut->nimimerkki) || empty($arvostelut->arvostelu)  || empty($arvostelut->stars)){
         return false;
     }
     return $arvostelut;

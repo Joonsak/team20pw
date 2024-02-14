@@ -135,7 +135,7 @@
     font-family: milonga;
 }
 .review-container {
-    background-color: #400101;
+    background-color: white;
     border: 1px solid #ccc; 
     border-radius: 5px; 
     padding: 10px; 
@@ -149,7 +149,14 @@
     text-overflow: ellipsis; 
     font-family: milonga;
 }
-
+#stars {
+    color:orange;
+    font-size:20px;
+}
+#star1, #star2, #star3, #star4, #star5{
+    color:orange;
+    font-size:30px;
+}
 /*
 Our color palette
 #2c2b22 close to black

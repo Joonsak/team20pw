@@ -24,7 +24,14 @@ if ($tulos) { // Check if query was successful
         echo "<div class='col-md-4'>";
         echo "<div class='review-container'>";
         echo "<h2>$rivi->nimimerkki</h2>";
-        echo "<p class='arvostelu'>$rivi->arvostelu</p> <a href='../php/poista.php?poistettava=$rivi->id'>Poista</a></p>";
+        if ($rivi->stars === "star1") {    echo "<p id='star1'> &#9733;</p>";}
+        else if ($rivi->stars === "star2") {echo "<p id='star2'> &#9733;&#9733;</p>";}
+        else if ($rivi->stars === "star3") {echo "<p id='star3'> &#9733;&#9733;&#9733;</p>";}
+        else if ($rivi->stars === "star4") {echo "<p id='star4'> &#9733;&#9733;&#9733;&#9733;</p>";}
+        else if ($rivi->stars === "star5") {echo "<p id='star5'> &#9733;&#9733;&#9733;&#9733;&#9733;</p>";}
+        
+        echo "<p class='arvostelu'>$rivi->arvostelu</p>";
+        echo "<a href='../php/poista.php?poistettava=$rivi->id'><button type='button'>Poista</button></a></p>";
         echo "</div>";
         echo "</div>";
         
