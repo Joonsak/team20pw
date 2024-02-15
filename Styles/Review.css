@@ -35,68 +35,23 @@
  }
  
  
- @media screen and (max-width: 1250px) {
-    #Slogan {
-       opacity:0;
-    }
- }
- @media screen and (max-width: 1200px) {
-    .CenterContent {
-        flex-direction: column;
-        align-items: center;
-    }
  
-    .CenterContent > div {
-        margin: 10px 0;
-    }
-    .MainHeader {
-        text-align: center;
-    }
- 
-    .MainHeader > div {
-        flex-direction: column;
-    }
- }
- footer{
-    background-color: #f2c063;
-    margin-left:100px;
-    margin-right: 100px;
-    padding: 10px 0;
-    align-content: center;
-    text-align: center;
-    font-size: small;
-    font-family: milonga;
- 
- 
- }
- @media screen and (max-width: 500px) {
-    body {
-        background-color: #2c2b22;
-        padding-bottom: 0;
-    }
-
-    .AnotherBody {
-        margin: 0; 
-        padding: 10px; 
-    }
- 
-    nav, footer {
-        margin-left: 0;
-        margin-right: 0;
-        width: 100%; 
-    }
- }
  
 #arvostelulomake {
-    margin-left:300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-family: milonga;
-    
 }
+
 #nappi {
-    display:flex;
+    display:block;
     margin-top:5px;
     font-family: milonga;
     /* background-color: #f2c063; */
+    align-items: center;
+    align-self: center;
+    text-align: center;
 }
 #arvo {
     width:600px;
@@ -150,13 +105,84 @@
     font-family: milonga;
 }
 #stars {
-    color:orange;
-    font-size:20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: orange;
+    font-size: 20px;
+    background-color: #e2e2da;
+    text-align: center; /* Ensure text alignment for the stars */
 }
 #star1, #star2, #star3, #star4, #star5{
     color:orange;
     font-size:30px;
 }
+@media screen and (max-width: 1250px) {
+    #Slogan {
+       opacity:0;
+    }
+ }
+ @media screen and (max-width: 1200px) {
+    .CenterContent {
+        flex-direction: column;
+        align-items: center;
+    }
+ 
+    .CenterContent > div {
+        margin: 10px 0;
+    }
+    .MainHeader {
+        text-align: center;
+    }
+ 
+    .MainHeader > div {
+        flex-direction: column;
+    }
+ }
+ footer{
+    background-color: #f2c063;
+    margin-left:100px;
+    margin-right: 100px;
+    padding: 10px 0;
+    align-content: center;
+    text-align: center;
+    font-size: small;
+    font-family: milonga;
+ }
+ @media screen and (max-width: 900px) {
+    #arvostelulomake {
+        width: 100%;
+
+    }
+
+    #arvo {
+        width: 95%;
+        
+    }
+}
+ @media screen and (max-width: 500px) {
+    body {
+        background-color: #2c2b22;
+        padding-bottom: 0;
+    }
+
+    .AnotherBody {
+        margin: 0; 
+        padding: 10px; 
+    }
+ 
+    nav, footer {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%; 
+    }
+    #stars {
+        align-items: center;
+        align-self: center;
+        text-align: center;
+    }
+ }
+
 /*
 Our color palette
 #2c2b22 close to black
