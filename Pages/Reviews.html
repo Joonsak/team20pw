@@ -50,7 +50,7 @@
     </nav>
     <div class="AnotherBody">
         <form id='arvostelulomake'>
-            <h3>Nimimerkki:</h3> <input id="nimi" type='text' name='nimimerkki' value='' maxlength="20" minlength="3" required placeholder='Nimimerkki...'> <br>
+            <h3>Nickname:</h3> <input id="nimi" type='text' name='nimimerkki' value='' maxlength="20" minlength="3" required placeholder='Nickname...'> <br>
             <label for="stars"><h3>Choose a star rating:</h3></label>
             <select name="stars" id="stars">
             <option value=""></option>
@@ -60,7 +60,7 @@
         <option value="star4"> &#9733;&#9733;&#9733;&#9733; </option>
         <option value="star5"> &#9733;&#9733;&#9733;&#9733;&#9733; </option>
         </select>
-            <h3>Arvostelu: </h3> <textarea id="arvo"type='text'  name='arvostelu' value='' maxlength="500" minlength="5" required  placeholder='Arvostelu...'></textarea>
+            <h3>Review: </h3> <textarea id="arvo"type='text'  name='arvostelu' value='' maxlength="500" minlength="5" required  placeholder='Review...(Max 500 character)'></textarea>
             <input id="nappi" type='button'  name='ok' value='Lähetä' onclick="lahetaArvostelu(this.form);"><br>
             </form>
             <p id='result'>
@@ -76,7 +76,7 @@
 
     <script>
         var hid="jooo";
-        function lahetaArvostelu(lomake){
+        function lahetaArvostelu(lomake){          
             var arvostelut=new Object();
             arvostelut.nimimerkki=lomake.nimimerkki.value;
             arvostelut.arvostelu=lomake.arvostelu.value;
@@ -92,6 +92,9 @@
             xmlhttp.open("POST", "../php/arvostelu.php", true);
             xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xmlhttp.send("arvostelut=" + jsonArvostelut);
+            document.getElementById("nimi").value = "";
+            document.getElementById("stars").value = "";
+            document.getElementById("arvo").value = "";
         }
     
         function ArvostelunTulostus(hid){
