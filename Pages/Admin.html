@@ -49,11 +49,12 @@
         </div>
     </nav>
     <div class="AnotherBody">
-        <form id='admin'>
+        <form id='admin' method="POST">
             <h3>Username:</h3> <input id="user" type='text' name='username' value='' maxlength="32"  > <br>
             <h3>Password:</h3> <input id="pass" type='text' name='password' value='' maxlength="32"  > <br>
-            <input  type='button'  name='ok' value='Login' onclick="checkLogin(this.form)"><br>
+            <input  type='button'  name='ok' value='Login' onclick="checkLogin()"><br>
         </form>
+        <div id="result"></div>
     </div> 
     <footer>
         <p>Unofficial page</p>
@@ -74,6 +75,7 @@
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             document.getElementById("result").innerHTML = this.responseText;
+            alert(this.responseText);
         }
     };
     xmlhttp.open("POST", "../php/login.php", true);

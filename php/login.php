@@ -9,27 +9,24 @@ try{
      print "Yhteysvirhe";
      exit;
  }
-if($_SERVER["REQUEST_METHOD"]=="post"){
+if($_SERVER["REQUEST_METHOD"]=="POST"){
     $username = $_POST["username"];
     $password = $_POST["password"];
 
     $sql = "select * from users where username='$username' and password='$password'";
-    $result = mysqli_query($yhteys, $sql)
-    
+    $result = mysqli_query($yhteys, $sql);
+
     if($result->num_rows==1){
         $_SESSION['logged_in']=true;
         $_SESSION['username']=$username;
         $_SESSION['password']=$password;
         $_SESSION['role']='administrator';
-        header('Location:../Pages/Admin.html');
         exit;
     } else {
-        header('Location:../index.html');
         exit;
     }
 }
  if($_SESSION['role'] !='administrator'){
-    header('location: ../index.html');
     exit;
  }
 
