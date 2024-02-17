@@ -10,11 +10,12 @@ try{
      exit;
  }
 if($_SERVER["REQUEST_METHOD"]=="post"){
-    $username = $_POST["user"];
-    $password = $_POST["pass"];
+    $username = $_POST["username"];
+    $password = $_POST["password"];
 
     $sql = "select * from users where username='$username' and password='$password'";
-    $result = query($sql);
+    $result = mysqli_query($yhteys, $sql)
+    
     if($result->num_rows==1){
         $_SESSION['logged_in']=true;
         $_SESSION['username']=$username;
