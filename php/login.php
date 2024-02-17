@@ -21,8 +21,10 @@ if($_SERVER["REQUEST_METHOD"]=="post"){
         $_SESSION['password']=$password;
         $_SESSION['role']='administrator';
         header('Location:../Pages/Admin.html');
+        exit;
     } else {
         header('Location:../index.html');
+        exit;
     }
 }
  if($_SESSION['role'] !='administrator'){
