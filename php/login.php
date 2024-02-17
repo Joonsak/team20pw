@@ -9,18 +9,25 @@ try{
      print "Yhteysvirhe";
      exit;
  }
+if($_SERVER["REQUEST_METHOD"]=="post"){
+    $username = $_POST["user"];
+    $password = $_POST["pass"];
 
- $sql = "select * from users";
-
- $user=mysqli_fetch_object($sql)
-
- $user->username= $_SESSION['username'];
- $user->password= $_SESSION['password'];
- $user->role=$_SESSION['role'];
-
+    $sql = "select * from users where username='$username' and password='$password'";
+    $result = query($sql);
+    if($result->num_rows==1){
+        $_SESSION['logged_in']=true;
+        $_SESSION['username']=$username;
+        $_SESSION['password']=$password;
+        $_SESSION['role']='administrator';
+        header('Location:../Pages/Admin.html');
+    } else {
+        header('Location:../index.html');
+    }
+}
  if($_SESSION['role'] !='administrator'){
     header('location: ../index.html');
     exit;
  }
- 
+
 ?>
