@@ -52,7 +52,7 @@
         <form id='admin'>
             <h3>Username:</h3> <input id="user" type='text' name='username' value='' maxlength="32"  > <br>
             <h3>Password:</h3> <input id="pass" type='text' name='password' value='' maxlength="32"  > <br>
-            <input  type='button'  name='ok' value='Login' onclick="checkLogin"><br>
+            <input  type='button'  name='ok' value='Login' onclick="checkLogin(this.form)"><br>
         </form>
     </div> 
     <footer>
@@ -63,9 +63,22 @@
     </footer>
 
     <script>
-     function checkLogin(lomake) {
+  function checkLogin() {
+    var username = document.getElementById('user').value;
+    var password = document.getElementById('pass').value;
+    var formData = new FormData();
+    formData.append('username', username);
+    formData.append('password', password);
 
-     }
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("result").innerHTML = this.responseText;
+        }
+    };
+    xmlhttp.open("POST", "../php/login.php", true);
+    xmlhttp.send(formData);
+}
     
         </script>
 </body>
