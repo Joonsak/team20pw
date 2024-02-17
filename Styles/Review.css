@@ -182,7 +182,11 @@
         text-align: center;
     }
  }
-
+ #admin {
+    align-items: center;
+    align-self: center;
+    text-align: center;
+}
 /*
 Our color palette
 #2c2b22 close to black
