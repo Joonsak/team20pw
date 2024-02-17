@@ -23,6 +23,6 @@ if (!empty($poistettava)){
 //Suljetaan tietokantayhteys
 mysqli_close($yhteys);
 //ja ohjataan pyyntö takaisin listaukseen
-header("Location:../Pages/Reviews.html");
+header("Location:../Pages/Admin.html");
 exit;
 ?>
