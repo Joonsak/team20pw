@@ -21,13 +21,6 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         $_SESSION['username']=$username;
         $_SESSION['password']=$password;
         $_SESSION['role']='administrator';
-$init = parse_ini_file("../asetukset/.ht.asetukset.ini");
-$yhteys = mysqli_connect($init["databaseserver"], $init["username"], $init["password"], $init["database"]);
-
-// Check if the connection was successful
-if (!$yhteys) {
-    die("Connection failed: " . mysqli_connect_error());
-}
 
 $tulos = mysqli_query($yhteys, "SELECT * FROM arvostelut");
 
