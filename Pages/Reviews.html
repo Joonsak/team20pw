@@ -76,12 +76,17 @@
     </footer>
 
     <script>
+        //we created variable hid for our script that runs everytime that the body does onload. 
         var hid="jooo";
-        function lahetaArvostelu(lomake){          
+
+        //this function here sends our form to the php which there saves it to our MYSQL database.
+        function lahetaArvostelu(lomake){    
+            //we create here a new object that has variables that get the values from the form that we or you fill.      
             var arvostelut=new Object();
             arvostelut.nimimerkki=lomake.nimimerkki.value;
             arvostelut.arvostelu=lomake.arvostelu.value;
             arvostelut.stars=lomake.stars.value;
+            //here we turn the object arvostelut into variable jsonArvostelut that we will send. 
             var jsonArvostelut=JSON.stringify(arvostelut);
     
             xmlhttp = new XMLHttpRequest();
@@ -93,11 +98,13 @@
             xmlhttp.open("POST", "../php/arvostelu.php", true);
             xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xmlhttp.send("arvostelut=" + jsonArvostelut);
+            //we also made it get the elements so we can print the review at the same time.
             document.getElementById("nimi").value = "";
             document.getElementById("stars").value = "";
             document.getElementById("arvo").value = "";
         }
     
+        //this is the bodyonload function that prints the reviews everytime our page refreshes
         function ArvostelunTulostus(hid){
             xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function() {

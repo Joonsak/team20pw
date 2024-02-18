@@ -67,6 +67,7 @@
     </footer>
 
     <script>
+        //this function makes it so that our form sends it to the php that checks if the account exits and if it is an administrator.
         function checkLogin() {
             var username = document.getElementById('user').value;
             var password = document.getElementById('pass').value;
@@ -83,6 +84,7 @@
             xmlhttp.open("POST", "../php/login.php", true);
             xmlhttp.send(formData);
         }
+        //this function runs everytime that page loads for example when refreshes. then using the php when refreshes. 
         function LoggedIn(){
             xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function(){
