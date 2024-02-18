@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blushing Mermaid - Home</title>
 </head>
-<body >
+<body onload="LoggedIn()">
     <nav class="navbar navbar-expand-md">
         <div class="container-fluid">
             <a class="nav-link" href="../index.html">Home</a>
@@ -91,7 +91,6 @@
             xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xmlhttp.send();
         }
-        setInterval(LoggedIn, 10000);   
     </script>
 </body>
 </html>
