@@ -31,7 +31,7 @@ if ($tulos) { // Check if query was successful
         else if ($rivi->stars === "star5") {echo "<p id='star5'> &#9733;&#9733;&#9733;&#9733;&#9733;</p>";}
         
         echo "<p class='arvostelu'>$rivi->arvostelu</p>";
-        echo "<a href='../php/poista.php?poistettava=$rivi->id'><button type='button'>Poista</button></a></p>";
+        if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']===true) {echo "<a href='../php/poista.php?poistettava=$rivi->id'><button type='button'>Poista</button></a></p>";}
         echo "</div>";
         echo "</div>";
         
