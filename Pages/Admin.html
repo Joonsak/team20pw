@@ -54,7 +54,7 @@
             <h3>Password:</h3> <input id="pass" type='password' name='password' value='' maxlength="32"  > <br>
             <input  type='button'  name='ok' value='Login' onclick="checkLogin()"><br>
         </form>
-        <div id="result"></div>
+        <div id="result"></div> 
     </div> 
     <footer>
         <p>Unofficial page</p>
@@ -64,23 +64,34 @@
     </footer>
 
     <script>
-  function checkLogin() {
-    var username = document.getElementById('user').value;
-    var password = document.getElementById('pass').value;
-    var formData = new FormData();
-    formData.append('username', username);
-    formData.append('password', password);
+        function checkLogin() {
+            var username = document.getElementById('user').value;
+            var password = document.getElementById('pass').value;
+            var formData = new FormData();
+            formData.append('username', username);
+            formData.append('password', password);
 
-    xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("result").innerHTML = this.responseText;
+            xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("result").innerHTML = this.responseText;
+                }
+            };
+            xmlhttp.open("POST", "../php/login.php", true);
+            xmlhttp.send(formData);
         }
-    };
-    xmlhttp.open("POST", "../php/login.php", true);
-    xmlhttp.send(formData);
-}
-    
-        </script>
+        function LoggedIn(){
+            xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status==200){
+                    document.getElementById("result").innerHTML = this.responseText;
+                }
+            }
+            xmlhttp.open("POST", "../php/admin.php", true);
+            xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xmlhttp.send();
+        }
+        setInterval(LoggedIn, 10000);   
+    </script>
 </body>
 </html>
