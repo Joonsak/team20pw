@@ -99,6 +99,7 @@
             xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xmlhttp.send("arvostelut=" + jsonArvostelut);
             //we also made it get the elements so we can print the review at the same time.
+            //this under here sets the values as empty in the form afterwards.
             document.getElementById("nimi").value = "";
             document.getElementById("stars").value = "";
             document.getElementById("arvo").value = "";
