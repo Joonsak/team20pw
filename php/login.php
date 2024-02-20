@@ -10,7 +10,7 @@ $init = parse_ini_file("../asetukset/.ht.asetukset.ini");
 try {
     $yhteys = mysqli_connect($init["databaseserver"], $init["username"], $init["password"], $init["database"]);
 } catch(Exception $e) {
-    print "Yhteysvirhe";
+    header("Location:../Pages/Errors/Error.html");
     exit;
 }
 
@@ -20,9 +20,10 @@ if($_SERVER["REQUEST_METHOD"]=="POST") {
     $username = $_POST["username"];
     $password = $_POST["password"];
 
+
     // Checks if the given username and password match one in the database
     $sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
-    
+      $stmt = mysqli_prepare($yhteys, $sql);
     // Executes query
     $result = mysqli_query($yhteys, $sql);
 

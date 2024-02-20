@@ -14,11 +14,11 @@ try{
     $yhteys=mysqli_connect($init["databaseserver"], $init["username"], $init["password"], $init["database"]);
  }
  catch(Exception $e){
-     print "Yhteysvirhe";
-     exit;
+    header("Location:../Pages/Errors/Error.html");
+    exit;
  }
 
-
+// avaa jsonin ja muuttaa sen
  $arvostelut = json_decode($json);
 
 //Tehdään sql-lause, jossa kysymysmerkeillä osoitetaan paikat
@@ -26,7 +26,7 @@ try{
 if ($arvostelut === null) {
     // JSON decoding failed
     // Handle the error, e.g., by printing an error message or logging
-    die("JSON decoding failed");
+    die("Error, try again later");
 }
 // makes an sql statemnt that inserts data into table
 $sql = "INSERT INTO arvostelut (nimimerkki, arvostelu, stars) VALUES (?, ?, ?)";

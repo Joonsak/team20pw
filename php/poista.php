@@ -10,7 +10,7 @@ $init = parse_ini_file("../asetukset/.ht.asetukset.ini");
 try {
     $yhteys = mysqli_connect($init["databaseserver"], $init["username"], $init["password"], $init["database"]);
 } catch(Exception $e) {
-    print "Yhteysvirhe";
+    header("Location:../Pages/Errors/Error.html");
     exit;
 }
 
