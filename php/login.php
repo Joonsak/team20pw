@@ -23,7 +23,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST") {
 
     // Checks if the given username and password match one in the database
     $sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
-      $stmt = mysqli_prepare($yhteys, $sql);
+    $stmt = mysqli_prepare($yhteys, $sql);
     // Executes query
     $result = mysqli_query($yhteys, $sql);
 
